@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', () => {
     // Funcionalidad 1: Añadir un botón que despliegue un mensaje
     const button = document.createElement('button');
@@ -32,5 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.remove('enlarge-text');
         });
     });
+
+    // Funcionalidad 4: Animación de aparición de imagen cada vez que vuelve a entrar en la vista
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+            } else {
+                entry.target.classList.remove('fade-in');
+            }
+        });
+    });
+
+    const image = document.querySelector('.image-container');
+    if (image) {
+        observer.observe(image);
+    }
 });
 
