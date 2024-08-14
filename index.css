@@ -177,10 +177,26 @@ body {
     margin-right: 20px; 
 }
 
+/*animacion y diseño de la imagen*/
+/*animacion y diseño de la imagen*/
+/*animacion y diseño de la imagen*/
+
 .image-container {
     max-width: 100%; /* Asegura que la imagen no se desborde */
     height: auto; /* Mantiene la proporción de la imagen */
+    opacity: 0; /* Inicia la imagen invisible */
+    transform: translateY(20px); /* Inicia con una leve traslación */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Aplica la transición */
 }
+
+.image-container.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a su posición original */
+}
+
+
+/*qui acabo diseño de imagen*/
+/*qui acabo diseño de imagen*/
 .text-content {
     font-size: 2.5rem; 
     margin-bottom: 10px; /* Espacio entre los párrafos */
@@ -208,4 +224,64 @@ body {
     transform: translateY(0); 
 }
 
+
+/*estilos para la parte de los servicios de la pagina**/
+/*estilos para la parte de los servicios de la pagina**/
+
+/*estilos para la parte de los servicios de la pagina**/
+.bodyduct {
+    background-color: #003764;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#container-diseno {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#titulo-principal-diseno {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#descripcion-principal-diseno {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Sección para alinear títulos y descripciones en una misma línea */
+.section-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.section-row .titulo {
+    font-size: 24px;
+    margin-right: 20px; /* Ajusta este margen para controlar la separación */
+    flex: 1;
+}
+
+.section-row .descripcion {
+    font-size: 16px;
+    flex: 3;
+}
+
+.section-row .logo {
+    flex: 0;
+    margin-left: 20px;
+    width: 100px;
+    height: auto;
+}
+
+/* Separadores */
+#separador-1, #separador-2 {
+    border: none;
+    border-top: 1px solid #FFFFFF;
+    margin: 20px 0;
+}
 
